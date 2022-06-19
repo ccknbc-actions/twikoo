@@ -19,7 +19,7 @@ jobs:
          node-version: "10.x"
       - name: Run
         run: |
-          git clone -b dev https://github.com/imaegoo/twikoo.git
+          git clone -b main https://github.com/imaegoo/twikoo.git
           npm i -g @cloudbase/cli
           tcb login --apiKeyId "${{ secrets.SECRETID }}" --apiKey "${{ secrets.SECRETKEY }}"
           tcb fn deploy "twikoo" -e "${{ secrets.TCBENVID }}" --force --dir ./twikoo/src/function/twikoo
